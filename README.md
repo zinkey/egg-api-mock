@@ -5,8 +5,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-api-mock.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-api-mock
-[travis-image]: https://img.shields.io/travis/eggjs/egg-api-mock.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-api-mock
+[travis-image]: https://img.shields.io/travis/zinkey/egg-api-mock.svg?style=flat-square
+[travis-url]: https://travis-ci.org/zinkey/egg-api-mock
 
 
 egg plugin api mock
