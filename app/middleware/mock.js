@@ -1,3 +1,5 @@
+'use strict';
+
 const { join, resolve } = require('path');
 const glob = require('glob');
 const Router = require('koa-router');

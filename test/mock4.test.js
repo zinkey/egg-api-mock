@@ -2,7 +2,7 @@
 
 const mock = require('egg-mock');
 
-describe.only('test/mock4.test.js', () => {
+describe('test/mock4.test.js', () => {
   let app;
   before(() => {
     app = mock.app({
@@ -16,31 +16,31 @@ describe.only('test/mock4.test.js', () => {
   it('should return list length 1', () => {
     return app.httpRequest()
       .get('/api/list')
-      .expect(200, [])
+      .expect(200, []);
   });
 
   it('should return list length', () => {
     return app.httpRequest()
       .post('/api/list/add')
-      .expect(200)
+      .expect(200);
   });
 
   it('should add list', () => {
     return app.httpRequest()
       .get('/api/list')
-      .expect(200, [1])
+      .expect(200, [ 1 ]);
   });
 
   it('should delete list', () => {
     return app.httpRequest()
       .del('/api/list/delete')
-      .expect(200)
+      .expect(200);
   });
 
   it('should return list length 2', () => {
     return app.httpRequest()
       .get('/api/list')
-      .expect(200, [])
+      .expect(200, []);
   });
 
 });

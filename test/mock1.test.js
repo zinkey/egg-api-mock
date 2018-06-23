@@ -30,7 +30,7 @@ describe('test/mock1.test.js', () => {
   it('should return get json', () => {
     return app.httpRequest()
       .get('/api/users')
-      .expect({success: true})
+      .expect({ success: true })
       .expect(200);
   });
 });

@@ -16,7 +16,7 @@ describe('test/mock3.test.js', () => {
   it('should return status 500', () => {
     return app.httpRequest()
       .get('/api/status')
-      .expect(500, 'error')
+      .expect(500, 'error');
   });
 
 });
