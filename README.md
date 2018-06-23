@@ -39,11 +39,11 @@ exports.apiMock = {
   glob: '**/*.mock.js', // default glob
 };
 ```
-You can use koa-router like methods in ${dir}/*.mock.js
+You can use koa-router like methods in `${dir}/${glob}`, default: `mock/**/*.mock.js`
 
 Example: 
 
-1.mock.js
+mock/1.mock.js
 ```js
 module.exports = {
   "/api/user/:id": (ctx) => {
@@ -55,10 +55,10 @@ module.exports = {
 };
 ```
 
-2.mock.js
+mock/2.mock.js
 ```js
 module.exports = {
-  "POST /api/posttest": (ctx) => {
+  "POST /api/post": (ctx) => {
     ctx.body = ctx.request.body;
   },
 };
@@ -70,7 +70,7 @@ Then you can request you app:
 /api/user/1 : 1
 /api/user/2 : 2
 /api/users : {success: true}
-/api/posttest : post data
+/api/post : post data
 ```
 
 
