@@ -2,4 +2,6 @@
 
 exports.apiMock = {
   dir: 'mock',
+  env: [ 'local' ],
+  glob: '**/*.mock.js',
 };

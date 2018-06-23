@@ -1,7 +1,11 @@
+'use strict';
+
 exports.keys = '123456';
 
-module.exports = {
-  security: {
-    csrf: false,
-  },
+exports.security = {
+  csrf: false,
+};
+
+exports.apiMock = {
+  env: [ 'local', 'unittest' ],
 };

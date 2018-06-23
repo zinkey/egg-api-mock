@@ -13,6 +13,13 @@ describe('test/mock1.test.js', () => {
   after(() => app.close());
   afterEach(mock.restore);
 
+  it('should return router', () => {
+    return app.httpRequest()
+      .get('/')
+      .expect('hello world')
+      .expect(200);
+  });
+
   it('should return get params 1', () => {
     return app.httpRequest()
       .get('/api/user/1')

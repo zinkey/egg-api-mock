@@ -1,7 +1,7 @@
 {
   "name": "egg-api-mock",
-  "version": "1.0.1",
-  "description": "egg plugin api mock",
+  "version": "1.0.2",
+  "description": "An egg plugin for api mock",
   "eggPlugin": {
     "name": "apiMock"
   },

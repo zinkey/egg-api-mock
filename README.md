@@ -9,7 +9,7 @@
 [travis-url]: https://travis-ci.org/zinkey/egg-api-mock
 
 
-egg plugin api mock
+An egg plugin for api mock, enabled under local development default.
 
 ## Install
 
@@ -34,7 +34,9 @@ Configuration
 ```js
 // {app_root}/config/config.default.js
 exports.apiMock = {
-  dir: 'mock', // default
+  dir: 'mock', // default mock dir
+  env: [ 'local' ], // enabled under local development default
+  glob: '**/*.mock.js', // default glob
 };
 ```
 You can use koa-router like methods in ${dir}/*.mock.js
@@ -56,7 +58,7 @@ module.exports = {
 2.mock.js
 ```js
 module.exports = {
-  "/api/posttest": (ctx) => {
+  "POST /api/posttest": (ctx) => {
     ctx.body = ctx.request.body;
   },
 };

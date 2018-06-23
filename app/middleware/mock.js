@@ -32,7 +32,7 @@ module.exports = (options, app) => {
 
   logger.info(`[egg-api-mock] dir: ${absMockPath}`);
 
-  const mockFiles = glob.sync('**/*.mock.js', {
+  const mockFiles = glob.sync(apiMock.glob, {
     cwd: absMockPath,
   });
 
