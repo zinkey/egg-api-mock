@@ -1,0 +1,60 @@
+{
+  "name": "egg-api-mock",
+  "version": "1.0.0",
+  "description": "egg plugin api mock",
+  "eggPlugin": {
+    "name": "apiMock"
+  },
+  "keywords": [
+    "egg",
+    "plugin",
+    "egg-plugin",
+    "eggPlugin"
+  ],
+  "dependencies": {
+    "assert": "^1.4.1",
+    "debounce": "^1.1.0",
+    "glob": "^7.1.2",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "egg": "^2.6.1",
+    "egg-bin": "^4.6.3",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.17.2",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^7.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": [
+    "app",
+    "config",
+    "agent.js",
+    "app.js"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "ci": {
+    "versions": [
+      "8",
+      "9"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zinkey/egg-api-mock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zinkey/egg-api-mock/issues"
+  },
+  "homepage": "https://github.com/zinkey/egg-api-mock",
+  "author": "http://github.com/zinkey/",
+  "license": "MIT"
+}
